@@ -1,0 +1,10 @@
+{
+  "name": "pi-2048",
+  "version": "1.0.0",
+  "description": "2048 sliding tile puzzle for pi coding agent",
+  "keywords": ["pi-package"],
+  "pi": { "extensions": ["extensions/pi-2048.ts"] },
+  "author": "artale",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/arosstale/pi-2048" }
+}
