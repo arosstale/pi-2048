@@ -291,8 +291,14 @@ function renderGame(s: GameState, w: number, h: number): string[] {
   } else if (s.lost) {
     lines.push(`${indent}  ${BOLD}\x1b[38;2;220;50;50mGAME OVER${RST}  Press R to restart`);
   } else {
-    lines.push(`${indent}  ←↑↓→/WASD/HJKL  U=undo  R=restart  Q=quit`);
+    lines.push(`${indent}  Use arrow keys, WASD, or HJKL to move tiles`);
   }
+  lines.push("");
+
+  // Help bar
+  const helpBorder = "─".repeat(Math.min(boardW, 60));
+  lines.push(`${indent}${theme.bg} ${helpBorder} ${RST}`);
+  lines.push(`${indent}  ${BOLD}Controls:${RST} ←↑↓→/WASD/HJKL=Move  U=Undo  T=Theme  R=Restart  Q=Quit`);
   lines.push("");
   return lines;
 }
